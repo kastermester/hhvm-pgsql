@@ -13,7 +13,7 @@ ENDIF()
 
 include_directories(${PGSQL_INCLUDE_DIR})
 
-HHVM_EXTENSION(pgsql pgsql.cpp)
+HHVM_EXTENSION(pgsql pgsql.cpp pdo_pgsql_statement.cpp pdo_pgsql_connection.cpp pdo_pgsql.cpp)
 HHVM_SYSTEMLIB(pgsql pgsql.php)
 
 target_link_libraries(pgsql ${PGSQL_LIBRARY})
